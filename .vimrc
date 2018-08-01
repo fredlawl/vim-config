@@ -18,16 +18,21 @@ set hlsearch
 set ignorecase
 set smartcase
 
+set spell spelling=en_us
+hi SpellBad cterm=underline ctermfg=red
+" Go here: http://vimdoc.sourceforge.net/htmldoc/spell.html to find all the
+" related commands
+
 set backspace=indent,eol,start
 set visualbell
 "set mouse=a
-set notimeout ttimeout ttimeoutlen=200
+"set notimeout ttimeout ttimeoutlen=200
 
-syn on se title
-set tabstop=8
-set softtabstop=8
-set shiftwidth=8
-set noexpandtab
+"syn on se title
+"set tabstop=8
+"set softtabstop=8
+"set shiftwidth=8
+"set noexpandtab
 
 set number
-set noeb vb t_vb=
+"set noeb vb t_vb=
