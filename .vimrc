@@ -54,6 +54,7 @@ if has("autocmd")
 	filetype on
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown textwidth=75
+	autocmd BufNewFile,BufRead *.c,*.h,*.cpp,*.hpp setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab textwidth=75
 endif
 
 "set noeb vb t_vb=
