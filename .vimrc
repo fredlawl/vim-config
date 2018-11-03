@@ -14,17 +14,27 @@ set hidden
 set wildmenu
 set showcmd
 set hlsearch
-
 set ignorecase
 set smartcase
+set number
+set cursorline
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set ruler
+set showmode
+set title
+set nostartofline
+set laststatus=2
+set backspace=indent,eol,start
+set visualbell
+set scrolloff=3
+set nowrap
 
-set spell spelling=en_us
+set spell spelllang=en_us
 hi SpellBad cterm=underline ctermfg=red
+
 " Go here: http://vimdoc.sourceforge.net/htmldoc/spell.html to find all the
 " related commands
 
-set backspace=indent,eol,start
-set visualbell
 "set mouse=a
 "set notimeout ttimeout ttimeoutlen=200
 
@@ -34,5 +44,15 @@ set visualbell
 "set shiftwidth=8
 "set noexpandtab
 
-set number
+if exists("&relativenumber")
+	set relativenumber
+	au BufReadPost * set relativenumber
+endif
+
+if has("autocmd")
+	filetype on
+	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+endif
+
 "set noeb vb t_vb=
