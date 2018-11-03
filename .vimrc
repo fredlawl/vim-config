@@ -1,5 +1,9 @@
 set nocompatible
 
+set enc=utf-8
+set fenc=utf-8
+set termencoding=utf-8
+
 set t_Co=256
 syntax enable
 let g:solarized_termtrans=1
@@ -17,10 +21,10 @@ let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
-	\ 'dir':  '\v[\/]\.(git|hg|svn)$',
-	\ 'file': '\v\.(exe|so|dll|o|swp)$',
-	\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-	\ }
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll|o|swp)$',
+    \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+    \ }
 let g:ctrlp_user_command = 'find %s -type f'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
@@ -49,6 +53,13 @@ set backspace=indent,eol,start
 set visualbell
 set scrolloff=3
 set nowrap
+set smartindent
+set autoindent
+
+" Set tabs to 4 spaces
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 set spell spelllang=en_us
 hi SpellBad cterm=underline ctermfg=red
@@ -66,15 +77,15 @@ hi SpellBad cterm=underline ctermfg=red
 "set noexpandtab
 
 if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
+    set relativenumber
+    au BufReadPost * set relativenumber
 endif
 
 if has("autocmd")
-	filetype on
-	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown textwidth=75
-	autocmd BufNewFile,BufRead *.c,*.h,*.cpp,*.hpp setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab textwidth=75
+    filetype on
+    autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+    autocmd BufNewFile,BufRead *.md setlocal filetype=markdown textwidth=75
+    autocmd BufNewFile,BufRead *.c,*.h,*.cpp,*.hpp setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab textwidth=75
 endif
 
 "set noeb vb t_vb=
