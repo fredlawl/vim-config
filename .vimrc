@@ -18,6 +18,7 @@ set ignorecase
 set smartcase
 set number
 set cursorline
+set list
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set ruler
 set showmode
