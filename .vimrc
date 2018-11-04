@@ -1,5 +1,7 @@
 set nocompatible
 
+inoremap jj <ESC>
+
 set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
@@ -70,11 +72,7 @@ hi SpellBad cterm=underline ctermfg=red
 "set mouse=a
 "set notimeout ttimeout ttimeoutlen=200
 
-"syn on se title
-"set tabstop=8
-"set softtabstop=8
-"set shiftwidth=8
-"set noexpandtab
+syn on se title
 
 if exists("&relativenumber")
     set relativenumber
