@@ -13,6 +13,9 @@ then
 	[[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
 fi
 
+echo "Installing submodules"
+$(git submodule update --init --recursive)
+
 if [[ -L "$vimrc" ]]
 then
 	echo "Unlinking $vimrc"
