@@ -30,7 +30,7 @@ if [[ -L $vim ]]
 then
 	echo "Unlinking $vim"
 	rm "$vim"
-elif [[ -f $vim ]]
+elif [[ -d $vim ]]
 then
 	echo "Backing up $vim"
 	mv "$vim" "$vim.bak"
