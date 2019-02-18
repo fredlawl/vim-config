@@ -1,6 +1,10 @@
 set nocompatible
 
 inoremap jj <ESC>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 set enc=utf-8
 set fenc=utf-8
@@ -57,6 +61,8 @@ set scrolloff=3
 set nowrap
 set smartindent
 set autoindent
+set splitbelow
+set splitright
 
 " Set tabs to 4 spaces
 set tabstop=4
