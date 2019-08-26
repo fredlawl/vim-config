@@ -70,7 +70,6 @@ set shiftwidth=4
 set expandtab
 
 set spell spelllang=en_us
-hi SpellBad cterm=underline ctermfg=red
 
 " Go here: http://vimdoc.sourceforge.net/htmldoc/spell.html to find all the
 " related commands
@@ -94,3 +93,7 @@ if has("autocmd")
 endif
 
 "set noeb vb t_vb=
+
+" Fix colors by putting them at end of file :)
+hi SpellBad cterm=underline ctermfg=red
+highlight SpecialKey ctermbg=none
